@@ -1,0 +1,7 @@
+{
+  "name": "t-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
