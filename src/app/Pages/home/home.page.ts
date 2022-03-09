@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tea } from 'src/app/Model/tea.model';
+import { TeaService } from 'src/app/Services/tea.service';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  teas: any;
+  teas: Tea[];
 
-  constructor() { fetch('./assets/files/teas.json').then(res => res.json())
-    .then(json => {
-      this.teas = json;
-    });}
+  constructor(private teaService: TeaService) {}
 
   ngOnInit() {
-    
+    this.teas = this.teaService.getTeas();
   }
+
 }
