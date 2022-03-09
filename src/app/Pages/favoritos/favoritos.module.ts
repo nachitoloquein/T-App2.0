@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SidebarPageRoutingModule } from './sidebar-routing.module';
+import { FavoritosPageRoutingModule } from './favoritos-routing.module';
 
-import { SidebarPage } from './sidebar.page';
+import { FavoritosPage } from './favoritos.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SidebarPageRoutingModule
+    FavoritosPageRoutingModule
   ],
-  declarations: [SidebarPage]
+  declarations: [FavoritosPage]
 })
-export class SidebarPageModule {}
+export class FavoritosPageModule {}

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  teas: any;
+
+  constructor() { fetch('./assets/files/teas.json').then(res => res.json())
+    .then(json => {
+      this.teas = json;
+    });}
 
   ngOnInit() {
+    
   }
-
 }
