@@ -3,15 +3,20 @@
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>home</ion-title>
+    <ion-title>Inicio</ion-title>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar class="input-search" placeholder='Buscar' showCancelButton="focus" mode=ios></ion-searchbar>
+    <ion-searchbar class="input-search" placeholder='Buscar' [(ngModel)]="searchTerm" showCancelButton="focus" mode=ios></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div *ngFor = "let tea of teas" >
+  <div *ngFor = "let tea of teas | filter:searchTerm" >
     <app-tea-card [teaItem]="tea"></app-tea-card>
   </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="tertiary" type="button">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

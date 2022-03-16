@@ -10,6 +10,7 @@ import { TeaService } from 'src/app/Services/tea.service';
 export class HomePage implements OnInit {
 
   teas: Tea[];
+  searchTerm: string;
 
   constructor(private teaService: TeaService) {}
 

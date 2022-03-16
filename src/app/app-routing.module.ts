@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'favoritos',
     loadChildren: () => FavoritosPageModule
+  },
+  {
+    path: 'config',
+    loadChildren: () => import('./Pages/config/config.module').then( m => m.ConfigPageModule)
   }
 ];
 
