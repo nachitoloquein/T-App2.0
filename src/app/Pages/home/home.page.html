@@ -12,10 +12,12 @@
 
 <ion-content>
   <div *ngFor = "let tea of teas | filter:searchTerm" >
+    <!-- component app-tea-card -->
     <app-tea-card [teaItem]="tea"></app-tea-card>
+    <!-- end component app-tea-card -->
   </div>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="tertiary" type="button">
+    <ion-fab-button color="tertiary" type="button" [routerLink]="['/tea-add']"> 
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

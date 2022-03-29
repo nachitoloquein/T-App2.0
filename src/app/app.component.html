@@ -1,10 +1,12 @@
 <ion-app>
   <ion-menu side="start" content-id="main-content">
-    <ion-header>
+    <ion-header class="ion-no-border">
       <ion-toolbar translucent>
-        <ion-title>Menú</ion-title>
+        <ion-title class="ion-text-center">Menú</ion-title>
       </ion-toolbar>
     </ion-header>
+
+
     <ion-content>
       <ion-list>
         <ion-item [routerLink]="['/home']">
@@ -18,7 +20,8 @@
         <ion-item>
           <ion-icon name="moon" slot="start"></ion-icon>
           <ion-label>Modo oscuro</ion-label>
-          <ion-toggle slot="end" color="dark" mode="ios"></ion-toggle>
+          <ion-toggle slot="end" color="dark" mode="ios" [ngModel]="darkMode"
+          (ionChange)="cambio()"></ion-toggle>
         </ion-item>
         <ion-item>
           <ion-icon name="cog" slot="start"></ion-icon>

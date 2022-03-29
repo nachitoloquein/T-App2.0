@@ -3,6 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { InicioPageModule } from './Pages/inicio/inicio.module';
 import { HomePageModule } from './Pages/home/home.module';
 import { FavoritosPageModule } from './Pages/favoritos/favoritos.module';
+import { TeaAddPageModule } from './Pages/tea-add/tea-add.module';
+import { ConfigPageModule } from './Pages/config/config.module';
 
 const routes: Routes = [
   {
@@ -25,7 +27,11 @@ const routes: Routes = [
   },
   {
     path: 'config',
-    loadChildren: () => import('./Pages/config/config.module').then( m => m.ConfigPageModule)
+    loadChildren: () => ConfigPageModule
+  },
+  {
+    path: 'tea-add',
+    loadChildren: () => TeaAddPageModule
   }
 ];
 
