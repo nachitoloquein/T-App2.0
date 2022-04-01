@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { FavoritosPageRoutingModule } from './favoritos-routing.module';
 
 import { FavoritosPage } from './favoritos.page';
+import {TeaCardComponent  } from './../../Components/tea-card/tea-card.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FavoritosPageRoutingModule
+    FavoritosPageRoutingModule,
+    Ng2SearchPipeModule
   ],
-  declarations: [FavoritosPage]
+  declarations: [FavoritosPage, TeaCardComponent]
 })
 export class FavoritosPageModule {}
