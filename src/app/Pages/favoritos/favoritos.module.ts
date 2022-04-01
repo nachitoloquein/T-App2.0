@@ -8,7 +8,8 @@ import { FavoritosPageRoutingModule } from './favoritos-routing.module';
 
 import { FavoritosPage } from './favoritos.page';
 import {TeaCardComponent  } from './../../Components/tea-card/tea-card.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+import { PopUpComponent } from 'src/app/Components/pop-up/pop-up.component'
 
 
 @NgModule({
@@ -16,9 +17,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CommonModule,
     FormsModule,
     IonicModule,
-    FavoritosPageRoutingModule,
-    Ng2SearchPipeModule
+    FavoritosPageRoutingModule
   ],
-  declarations: [FavoritosPage, TeaCardComponent]
+  declarations: [FavoritosPage, TeaCardComponent, PopUpComponent],
+  entryComponents: [PopUpComponent]
 })
 export class FavoritosPageModule {}
