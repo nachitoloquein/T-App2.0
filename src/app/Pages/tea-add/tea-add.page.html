@@ -3,7 +3,24 @@
     <ion-title class="ion-text-center">Agregar Té</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <p>works tea add</p>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-input placeholder="Nombre de té" type="text" #title></ion-input>
+          <ion-item>
+            <ion-label>Dificultad</ion-label>
+            <ion-select value="1">
+              <ion-select-option value="cat">Cat</ion-select-option>
+              <ion-select-option value="dog">Dog</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-button color="primary" (click)="saveNewPlace(title, imageURL)">
+            Guardar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>

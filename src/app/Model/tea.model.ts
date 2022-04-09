@@ -8,4 +8,4 @@ export interface Tea {
     temperatura: string,
     tipoTe: string,
     favorito: boolean
-  }
+}

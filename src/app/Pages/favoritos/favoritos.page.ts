@@ -21,6 +21,10 @@ export class FavoritosPage implements OnInit {
     });
   }
 
+  ordenarNombre(){
+    this.favoritos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+  }
+
   async abrirPopover(ev: any){
     const popover = await this.popoverController.create({
       component: PopUpComponent,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
+import { TeaService } from 'src/app/Services/tea.service';
 
 @Component({
   selector: 'app-pop-up',
@@ -8,9 +9,13 @@ import { PopoverController } from '@ionic/angular';
 })
 export class PopUpComponent implements OnInit {
 
-  constructor(private popoverController: PopoverController) { }
+
+  constructor(private popoverController: PopoverController, private teaService: TeaService) { }
 
   ngOnInit() {}
+
+  ordenar(){
+  }
 
   dismissPopover() {
     this.popoverController.dismiss();

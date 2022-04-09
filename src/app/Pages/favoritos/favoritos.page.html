@@ -11,9 +11,28 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor = "let favorito of favoritos" >
-    <!-- component app-tea-card -->
-    <app-tea-card [teaItem]="favorito"></app-tea-card>
-    <!-- end component app-tea-card -->
+  <!-- true condition-->
+  <div *ngIf="favoritos.length">
+    <div *ngFor = "let favorito of favoritos" >
+      <!-- component app-tea-card -->
+      <app-tea-card [teaItem]="favorito"></app-tea-card>
+      <!-- end component app-tea-card -->
+    </div>
   </div>
+  <!-- end true condition-->
+  <!-- false condition-->
+  <div *ngIf="!favoritos.length">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <h1>No hay favoritos!</h1>
+            <h4>Pulsa en el corazón de una receta para indicar que te gusta y de esta forma poder visualizarla en este panel.</h4>
+            <img src="https://media2.giphy.com/media/RirZYpDYvRIFuzUxZ1/200w.gif?cid=82a1493bmcd7vd6ikzx1m3lq3rfgzrmnhdxqfmzbf2fadenu&rid=200w.gif&ct=g">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!-- end false condition-->
 </ion-content>

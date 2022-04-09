@@ -4,7 +4,7 @@ import { Tea } from '../Model/tea.model';
 @Injectable({
   providedIn: 'root'
 })
-export class TeaService {
+export class TeaService {  
 
   private teas: Tea[] =[  
     { 
@@ -104,5 +104,4 @@ export class TeaService {
   {
      tea.favorito = like;
   }
-
 }
