@@ -8,15 +8,46 @@
     <ion-col>
       <ion-card>
         <ion-card-content>
-          <ion-input placeholder="Nombre de té" type="text" #title></ion-input>
+          <ion-input placeholder="Nombre de té" type="text" [(ngModel)]="nombre"></ion-input>
           <ion-item>
             <ion-label>Dificultad</ion-label>
-            <ion-select value="1">
-              <ion-select-option value="cat">Cat</ion-select-option>
-              <ion-select-option value="dog">Dog</ion-select-option>
+            <ion-select value="1" [(ngModel)]="dificultad">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="1.5">1.5</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="2.5">2.5</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="3.5">3.5</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="4.5">4.5</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
             </ion-select>
           </ion-item>
-          <ion-button color="primary" (click)="saveNewPlace(title, imageURL)">
+          <ion-input placeholder="Url de foto" type="text" [(ngModel)]="foto"></ion-input>
+          <ion-input placeholder="Ingredientes" type="text" [(ngModel)]="ingredientes"></ion-input>
+          <ion-input placeholder="Instrucciones" type="text" [(ngModel)]="instrucciones" ></ion-input>
+          <ion-item>
+            <ion-label>Temperatura</ion-label>
+            <ion-select value="Frío" [(ngModel)]="temperatura">
+              <ion-select-option value="Frío">Frío</ion-select-option>
+              <ion-select-option value="Caliente">Caliente</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>Tipo de té</ion-label>
+            <ion-select value="Té Verde" [(ngModel)]="tipoTe">
+              <ion-select-option value="Té Rojo">Té Rojo</ion-select-option>
+              <ion-select-option value="1.5">1.5</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="2.5">2.5</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="3.5">3.5</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="4.5">4.5</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-button color="primary" (click)="agregarTe()">
             Guardar
           </ion-button>
         </ion-card-content>

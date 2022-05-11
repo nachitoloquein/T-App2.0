@@ -88,7 +88,7 @@ export class TeaService {
   addTea(nombre: string, dificultad: number, foto: string, temperatura: string, ingredientes: string[], instrucciones: string[], tipoTe: string)
   {
     this.teas.push({
-      id: this.teas.length,
+      id: this.teas.length +1,
       nombre,
       dificultad,
       foto,
